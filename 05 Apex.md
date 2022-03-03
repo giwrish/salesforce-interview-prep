@@ -101,6 +101,8 @@ A technique designed specifically for:
 	- Execute method – processes a subset of the scoped records
 	- Finish method – does any post-job wrap-up
 
+https://developer.salesforce.com/forums/?id=9060G000000XdkOQAS
+
 #### Additional interfaces:
 Database.Stateful
 Database.AllowsCallouts
