@@ -36,7 +36,7 @@ The folder and its files must have the same name, including capitalization and u
 - `@track`
 
 
-### LWC Communication
+### [LWC Inter Component Communication Patterns](https://developer.salesforce.com/blogs/2021/05/inter-component-communication-patterns-for-lightning-web-components.html)
    - [Lightning Message Service](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.use_message_channel)
    - Custom Events
    - PubSub Limitations - can be accessed by components from other namespaces, cannot be used inside Visualforce
