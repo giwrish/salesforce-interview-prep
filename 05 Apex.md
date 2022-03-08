@@ -1,8 +1,12 @@
 # Apex 
 
-1. [Collections (List, Set, Map)](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
+### [Collections](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
+-   A [List](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_list.htm) holds an ordered collection of non-unique elements
+-   A [Set](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_set.htm) holds an unordered collection of unique elements
+-   A [Map](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_map.htm) holds a dictionary of key values in which keys are unique but values are not
 
-#### [`with sharing`, `without sharing`, and `inherited sharing`](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_keywords_sharing.htm)
+
+### [`with sharing`, `without sharing`, and `inherited sharing`](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_keywords_sharing.htm)
 
 When inherited sharing is used, it means that it will inherit the sharing settings of the caller class.
 
