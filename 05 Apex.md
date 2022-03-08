@@ -2,8 +2,17 @@
 
 1. [Collections (List, Set, Map)](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
 
-1. [`with sharing`, `without sharing`, and `inherited sharing`](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_keywords_sharing.htm)
-   [More on sharing keywords](https://medium.com/salesforce-champion/salesforce-inherited-sharing-c010a6832097)
+#### [`with sharing`, `without sharing`, and `inherited sharing`](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_keywords_sharing.htm)
+
+When inherited sharing is used, it means that it will inherit the sharing settings of the caller class.
+
+-   If a class with `without sharing` is calling the method of class with `inherited sharing`, then it will run in `without sharing` mode.
+-   If a class with `with sharing` is calling the method of class with `inherited sharing`, then it will run in `with sharing` mode.
+-   If a class with `omitted sharing` (i.e. no sharing is mentioned) is calling the method of class with `inherited sharing`, then it will run in **`without sharing`** mode as the default sharing mode of the `omitted sharing` is to run in `without sharing` mode (This is because the calling class is established as a `without sharing` context). A class declared as `inherited sharing` runs as `without sharing` only when **explicitly** called from an **already established** `without sharing` context.
+-   If a class with `with sharing` is calling a method of class with `omitted sharing` which in turn calls a method of class with `inherited sharing`, then it will run in `with sharing` mode, as the calling class is in `with sharing` mode and omitted class is established as `with sharing` context.
+-   If a class with `without sharing` is calling a method of class with `omitted sharing` which in turn calls a method of class with `inherited sharing`, then it will run in `without sharing` mode, as the calling class is in `without sharing` mode and the omitted class is established as `without sharing` context.
+-   If the class is used as the entry point to an Apex transaction, an `omitted sharing` declaration runs as `without sharing`.
+-   If the class is used as the entry point to an Apex transaction, `inherited sharing` ensures that the default is to run as `with sharing`.
 
 1.  [Apex Best Practices](https://developer.salesforce.com/blogs/developer-relations/2015/01/apex-best-practices-15-apex-commandments.html) - This is a must read. you should atleast know 5 apex best practices.
 
