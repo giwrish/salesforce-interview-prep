@@ -1,135 +1,15 @@
 # Apex 
 
 1. [Collections (List, Set, Map)](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
-1. Exception Handling - https://developer.salesforce.com/blogs/2017/09/error-handling-best-practices-lightning-apex
-
-### Keywords (Frequently Used)
 
 1. [`with sharing`, `without sharing`, and `inherited sharing`](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_keywords_sharing.htm)
-
-### Class Reference (Frequently Used)
-
-1.  Schema Class
-
-1.  Database Class
-
-    - What is the use case of savepoints?
-    - What is the use case of SaveResults, UpdateResults, DeleteResults etc.
-
-1.  System Class
-
-    - When should you use runAs()? - Know about isTestRunning, isFuture, isBatch, isQueueable?
-
-1.  Limit Class
-
-1.  Test class
-
-    - startTest() - stopTest() - @isTest - seeAllData - Setup Objects
+   [More on sharing keywords](https://medium.com/salesforce-champion/salesforce-inherited-sharing-c010a6832097)
 
 1.  [Apex Best Practices](https://developer.salesforce.com/blogs/developer-relations/2015/01/apex-best-practices-15-apex-commandments.html) - This is a must read. you should atleast know 5 apex best practices.
 
-### [Annotations](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_annotation.htm)
-
-    @AuraEnabled
-    @Future
-    @InvocableMethod
-    @InvocableVariable
-    @TestSetup
-    @TestVisible
-    @IsTest
-    @RemoteAction
-
 # [Asynchronous Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_async_overview.htm)
-
-## Asynchronous vs Synchronous
-### Asynchronous
-   - Actions that will not block the transaction or Process
-   - Duration is not priority
-   - Higher Governor limits
-
-### Synchronous
-   - Quick and Immediate actions
-   - Transactions are immediate and serial
-   - Normal Governor Limits
-
-## Ways to use asynchronous processing 
-   - Schedule & Batch jobs
-   - Queues
-   - @future
-   - Change Data Capture – Apex Triggers (Summer ’19)
-   - Platform Events – Event Based
-   - Continuations (UI)
-   - 
-### Why to use Anyc process Scenarios
-- Integrations to External Applications
-- Long running processes
-- Mixed DML Operations
-- Large volume of data loads & transactions
-
-
-### Future Method
-- A “set it and forget it” method
-- Call it and the async job is launched
-- No ability to monitor the job
-- Cannot chain @future calls
-- A public static method, decorated with @future
-- Arguments: Primitives (Integer, String, etc.)
-- Collections of primitives (List, Map, Set)
-- NOT SObjects or Apex objects
-- You can use JSON.serialize() and pass in a String
-- Returns void
-
-
-### Queueable Apex
-- A class and method that can be added to the queue to be executed
-- It’s monitorable and abortable
-- It’s chainable
-- A public class that implements the Queueable interface
-- Includes an execute method that accepts only a QueueableContext parameter
-- The execute method can access instance properties for the class
-- Launch by calling System.enqueueJob(cls) with an instance of the class.
-- Returns an AsyncApexJob Id
-
-
-### Batch Apex
-A technique designed specifically for:
-- Processing large numbers of records
-- Doing more work than can be done in a single transaction
-- It’s monitorable and abortable
-- A global class that implements the Database.Batchable interface Includes:
-	- Start method – identifies the scope (list of data to be processed)
-	- Execute method – processes a subset of the scoped records
-	- Finish method – does any post-job wrap-up
-
-https://developer.salesforce.com/forums/?id=9060G000000XdkOQAS
-
-#### Additional interfaces:
-Database.Stateful
-Database.AllowsCallouts
-
-Launch by calling Database.executeBatch(cls) with an instance of the class and an optional scope size
-Default scope size is 200
-Max scope size is 2,000
-Returns an AsyncApexJobId
-
-
-### Schedulable Class
-A global class that implements the Schedulable interface
-Includes an execute method
-Schedule by calling
-System.Schedule(‘job name’, cron expression, cls)
-Cron expression can be complex
-Returns a CronTrigger Id
-Can also schedule via the Salesforce UI
-seconds minutes hours   day_of_month   month   day_of_week   optional_year
-Run at 30 minutes past midnight on Jan 1 every year
-
-GeocodingSchedulable cls = new GeocodingSchedulable();
-System.Schedule('Geocode on Jan ',  '0  30  0  1  1  ?  *', cls);
-
-Run every hour
-System.Schedule('Geocode hourly', '0 0  *  *  *  ?  *', cls);
-
+  #### More Resources
+  1. [Apex Hours](https://www.apexhours.com/asynchronous-apex/)
 
 ### Questions
 1. Batch Apex
@@ -195,3 +75,35 @@ System.Schedule('Geocode hourly', '0 0  *  *  *  ?  *', cls);
 - Mixed DML Statement
 - [Mixed DML Operations in Test Methods](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dml_non_mix_sobjects_test_methods.htm)
 - [sObjects That Cannot Be Used Together in DML Operations](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dml_non_mix_sobjects.htm)
+
+1. Exception Handling - https://developer.salesforce.com/blogs/2017/09/error-handling-best-practices-lightning-apex
+
+### [Annotations](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_annotation.htm)
+
+    @AuraEnabled
+    @Future
+    @InvocableMethod
+    @InvocableVariable
+    @TestSetup
+    @TestVisible
+    @IsTest
+    @RemoteAction
+
+### Class Reference (Frequently Used)
+
+1.  Schema Class
+
+1.  Database Class
+
+    - What is the use case of savepoints?
+    - What is the use case of SaveResults, UpdateResults, DeleteResults etc.
+
+1.  System Class
+
+    - When should you use runAs()? - Know about isTestRunning, isFuture, isBatch, isQueueable?
+
+1.  Limit Class
+
+1.  Test class
+
+    - startTest() - stopTest() - @isTest - seeAllData - Setup Objects
