@@ -9,6 +9,8 @@ Simply remeber this -
 - A Batch cannot be called from Future and vice versa
 - Future can't be called from a Future
 
+If we try to do so, then we get AsyncException.
+
 ### Questions
 1. Batch Apex
    - Can we call another batch class from a batch class? - Yes, it is called batch chaining
