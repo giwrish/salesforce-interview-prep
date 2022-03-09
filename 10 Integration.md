@@ -81,26 +81,26 @@ https://help.salesforce.com/s/articleView?id=000335524&type=1
 
 # [OAuth Flows](https://www.linkedin.com/pulse/salesforce-oauth-which-flow-should-i-use-jannis-bott-/)
 
-- [OAuth 2.0 User-Agent Flow for Desktop or Mobile App Integration](https://help.salesforce.com/articleView?id=remoteaccess_oauth_user_agent_flow.htm&type=5&language=en_US)
+### [OAuth 2.0 User-Agent Flow for Desktop or Mobile App Integration](https://help.salesforce.com/articleView?id=remoteaccess_oauth_user_agent_flow.htm&type=5&language=en_US)
 
 With the OAuth 2.0 user-agent flow, users authorize a desktop or mobile app to access data using an external or embedded browser. Client apps running in a browser using a scripting language such as JavaScript can also use this flow. This flow uses the OAuth 2.0 implicit grant type.
 
 ![image](https://user-images.githubusercontent.com/34469349/157460005-86fd0e9e-6cb8-4030-9ddb-05d8690beaa5.png)
 
-- [OAuth 2.0 Web Server Flow for Web App Integration](https://help.salesforce.com/articleView?id=remoteaccess_oauth_web_server_flow.htm&type=5)
+### [OAuth 2.0 Web Server Flow for Web App Integration](https://help.salesforce.com/articleView?id=remoteaccess_oauth_web_server_flow.htm&type=5)
 
 To integrate an external web app with the Salesforce API, use the OAuth 2.0 web server flow, which implements the OAuth 2.0 authorization code grant type. With this flow, the server hosting the web app must be able to protect the connected app’s identity, defined by the client ID and client secret.
 
 ![image](https://user-images.githubusercontent.com/34469349/157460323-4c2175aa-e778-4a37-a8ed-85eef1ae6692.png)
 
 
-- [OAuth 2.0 JWT Bearer Flow for Server-to-Server Integration](https://help.salesforce.com/articleView?id=remoteaccess_oauth_jwt_flow.htm&type=5)
+### [OAuth 2.0 JWT Bearer Flow for Server-to-Server Integration](https://help.salesforce.com/articleView?id=remoteaccess_oauth_jwt_flow.htm&type=5)
 
 Sometimes you want to authorize servers to access data without interactively logging in each time the servers exchange information. For these cases, you can use the OAuth 2.0 JSON Web Token (JWT) bearer flow. 
 
 ![output-onlinepngtools](https://user-images.githubusercontent.com/34469349/157462122-423f14c0-5eb9-4a0c-a4bc-06ca65c4696c.png)
 
-- [OAuth 2.0 Username-Password Flow for Special Scenarios](https://help.salesforce.com/articleView?id=remoteaccess_oauth_username_password_flow.htm&type=5)
+### [OAuth 2.0 Username-Password Flow for Special Scenarios](https://help.salesforce.com/articleView?id=remoteaccess_oauth_username_password_flow.htm&type=5)
 
 You can use the username-password flow to authorize a client—via a connected app—that already has the user’s credentials. However, we recommend avoiding this flow because it passes credentials back and forth. Use it only if there’s a high degree of trust between the resource owner and the client, the client is a first-party app, Salesforce is hosting the data, and other grant types aren’t available. In these cases, set user permissions to minimize access and protect stored credentials from unauthorized access.
 
