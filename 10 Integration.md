@@ -96,6 +96,6 @@ Sometimes you want to authorize servers to access data without interactively log
 
 - [OAuth 2.0 Username-Password Flow for Special Scenarios](https://help.salesforce.com/articleView?id=remoteaccess_oauth_username_password_flow.htm&type=5)
 You can use the username-password flow to authorize a client—via a connected app—that already has the user’s credentials. However, we recommend avoiding this flow because it passes credentials back and forth. Use it only if there’s a high degree of trust between the resource owner and the client, the client is a first-party app, Salesforce is hosting the data, and other grant types aren’t available. In these cases, set user permissions to minimize access and protect stored credentials from unauthorized access.
-![image](https://user-images.githubusercontent.com/34469349/157464190-969948ff-e646-4038-88ae-89e3c6e2a8f3.png)
+![output-onlinepngtools](https://user-images.githubusercontent.com/34469349/157464533-057384b1-1012-4f1a-89e8-67c53a365d6b.png)
 
 - [OAuth 2.0 Username-Password Flow for Special Scenarios](https://help.salesforce.com/articleView?id=remoteaccess_oauth_username_password_flow.htm&type=5)
