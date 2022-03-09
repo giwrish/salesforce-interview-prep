@@ -5,7 +5,7 @@
 ### Which asynchronous can be called from where
 ![image](https://user-images.githubusercontent.com/34469349/157425189-abc2fc02-98a7-4ea5-a1ae-c5e7e361b96d.png)
 
-Simple remeber this -
+Simply remeber this -
 - A Batch cannot be called from Future and vice versa
 - Future can't be called from a Future
 
