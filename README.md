@@ -1,12 +1,5 @@
 # Salesforce Developer Interview Preparation Guide
 
-1. Behavioural Section
-    1. How to answer behavioral questions
-    1. Tell me about yourself
-    1. Why Do You Want to Work Here?
-    1. Question to ask interviewer after the interview
-    1. FA Behavioural Qs
-
 ### FA Technical Qs
 
 1. Write a batch class
