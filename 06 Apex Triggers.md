@@ -16,18 +16,29 @@ The simple reason is there could be some calculations/updates happening on the s
 
 ### [Triggers and Order of Execution](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_order_of_execution.htm)
 
-  1. System Validation Rules
-  1. Apex Before Triggers
-  1. Custom Validation Rules
-  1. Duplicate Rules
-  1. Apex After Triggers
-  1. Assignment Rules
-  1. Auto-Response Rules
-  1. Workflow Rules
-  1. Processes
-  1. Escalation Rules
-  1. Roll-Up Summary Fields
-
+  1. Loads existing record in trigger.old or initilizes for upsert
+  2. Loads trigger.new with new values
+  3. System validations
+  4. Flows configured to run before record is saved
+  5. Before triggers
+  6. System Validations & Custom Validations
+  7. Duplicate Rules
+  8. Saves the record in database
+  9. After triggers
+  10. Assignment rule (Case & Leads only)
+  11. Auto response rules (Case & Leads only)
+  12. Workflow rules
+  13. If worlfow updates the field then goes thru the save process only one time
+  14. Escalation Rules (Case only)
+  15. Flow automations but not in specific order - Processes, Flows launched by processes and flows launched by workflow rules
+  16. Flows configured to run after record is saved
+  17. Entitlement rules (Case only)
+  18. Parent roll up summary calculation
+  19. Grand parent roll up summary calculation
+  20. Criteria based sharing rule
+  21. Commits all dml operations
+  22. Post commit logic - send email, enqueue async apex (queueable and future)
+  
 ![image](https://user-images.githubusercontent.com/34469349/153751113-921ed046-43f6-4782-99ac-268a7e2eb3c9.png)
 
 # Platform Events and Triggers
