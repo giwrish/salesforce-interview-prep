@@ -20,6 +20,7 @@ Inheritance can be achieved by extending virtual class in apex.
 - Method overriding - run time polymorphism.
 
 - Why Method Overloading is not possible by changing the return type of method only?
+  Because of ambiguity, see below exmaple
 ```
 class Adder{  
   static int add(int a,int b){return a+b;}  
