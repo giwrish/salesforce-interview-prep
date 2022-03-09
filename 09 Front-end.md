@@ -202,13 +202,15 @@ https://github.com/leonardomso/33-js-concepts
 
 ## Visualforce
 
-1. View State - How to optimize? Transient keyword
-1. Waiting State -
-1. actionFunction
-1. actionSupport
-1. actionPollar
-1. actionRegion
-1. StandardController
-1. CustomController
-1. Page Reference Class
-6. Extentions (Standard and Custom)
+1. View State - To maintain state in a Visualforce page, the Lightning Platform platform includes the state of components, field values, and controller state in a hidden form element. This encrypted string is the view state and has a limit of 170KB. Large view states require longer processing times for each request, including serializing and deserializing, and encryption and decryption. Reducing your view state size causes your pages to load quicker and stall less often.
+2. [View State and Optimization](https://developer.salesforce.com/docs/atlas.en-us.salesforce_visualforce_best_practices.meta/salesforce_visualforce_best_practices/pages_best_practices_perf_code_view_state.htm)
+3. [`@RemoteAction` vs actionFunction](https://salesforce.stackexchange.com/questions/17375/difference-between-remoteaction-annotation-and-apexactionfunction)
+4. Waiting State -
+5. actionFunction
+6. actionSupport
+7. actionPollar
+8. actionRegion
+9. StandardController
+10. CustomController
+11. Page Reference Class
+12. Extentions (Standard and Custom)
