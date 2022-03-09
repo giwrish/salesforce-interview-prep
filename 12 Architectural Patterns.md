@@ -11,7 +11,7 @@ Inheritance is a mechanism in which one object acquires all the properties and 
 
 Inheritance represents the IS-A relationship. SavingsAccount IS-A Account. CurrentAccount IS-A Account. FixedDeposit IS-A Account.
 
-Inheritance can be achieved by extending virtual class in apex.
+Inheritance can be achieved by extending abstract and virtual class in apex.
 
 ## Polymorphism
 - Polymorphism is a concept by which we can perform a single action in different ways.
