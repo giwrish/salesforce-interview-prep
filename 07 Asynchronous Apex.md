@@ -2,6 +2,10 @@
 
 ### [Apex Hours](https://www.apexhours.com/asynchronous-apex/)
 
+### Which asynchronous can be called from where
+![image](https://user-images.githubusercontent.com/34469349/157425189-abc2fc02-98a7-4ea5-a1ae-c5e7e361b96d.png)
+
+
 ### Questions
 1. Batch Apex
    - Can we call another batch class from a batch class? - Yes, it is called batch chaining
