@@ -1,11 +1,137 @@
+
+
 # Object Oritented Concepts
 
 ## Inheritance
+Inheritance is a mechanism in which one object acquires all the properties and behaviours of a parent object.
+
+### Why use inheritance in
+-   For [Method Overriding](https://www.javatpoint.com/method-overriding-in-java) (so [runtime polymorphism](https://www.javatpoint.com/runtime-polymorphism-in-java) can be achieved).
+-   For Code Reusability.
+
+Inheritance represents the IS-A relationship. SavingsAccount IS-A Account. CurrentAccount IS-A Account. FixedDeposit IS-A Account.
+
+Inheritance can be achieved by extending virtual class in apex.
+
 ## Polymorphism
+- Polymorphism is a concept by which we can perform a single action in different ways.
+- There are two types of polymorphism : compile-time polymorphism and runtime polymorphism. We can perform polymorphism by method overloading and method overriding.
+- If you overload a static method, it is the example of compile time polymorphism.
+
+- Why Method Overloading is not possible by changing the return type of method only?
+```
+class Adder{  
+  static int add(int a,int b){return a+b;}  
+  static double add(int a,int b){return a+b;}
+}
+
+@isTest
+class TestAdder{  
+   static testAdd(){
+      Test.startTest();
+      
+      Adder.add(1,1); // THIS IS AMBIGOUS, PROGRAM WONT KNOW WHICH METHOD IS CALLED
+      
+      Test.stopTest();
+   }
+}  
+```
+
 ## Abstraction
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+
+### Ways to achieve Abstraction
+
+There are two ways to achieve abstraction
+1.  Abstract class (0 to 100%)
+2.  Interface (100%)
+
 ## Encapsulation
+Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates. Another way to think about encapsulation is, it is a protective shield that prevents the data from being accessed by the code outside this shield.
+
+-   Technically in encapsulation, the variables or data of a class is hidden from any other class and can be accessed only through any member function of its own class in which it is declared.
+-   As in encapsulation, the data in a class is hidden from other classes using the data hiding concept which is achieved by making the members or methods of a class private, and the class is exposed to the end-user or the world without providing any details behind implementation using the abstraction concept, so it is also known as a **combination of data-hiding and abstraction**.
+-   Encapsulation can be achieved by Declaring all the variables in the class as private and writing public methods in the class to set and get the values of variables
+
 
 # [interface vs abstract vs virtual](https://salesforceprofs.com/abstract-virtual-interface-in-apex/)
+<table class="s-table">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Interface</th>
+<th>Abstract</th>
+<th>Virtual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Keyword</strong></td>
+<td><em><strong><code>interface</code></strong></em> <br/> e.g <code>public interface MyInterface {}</code></td>
+<td><strong><code>abstract</code></strong> <br/> e.g <code>public abstract class MyAbstractClass {}</code></td>
+<td><em><strong><code>virtual</code></strong></em> <br/> e.g <code>public virtual class MyVirtualClass {}</code></td>
+</tr>
+<tr>
+<td><strong>How to use?</strong></td>
+<td>By <em><strong><code>implements</code></strong></em> <br/> e.g <code>public class MyChildClass implements MyInterface {}</code></td>
+<td>By <strong><code>extends</code></strong> <br/> e.g <code>public class MyChildClass extends MyAbstractClass {}</code></td>
+<td>By <strong><code>extends</code></strong> <br/> e.g <code>public class MyChildClass extends MyVirtualClass {}</code></td>
+</tr>
+<tr>
+<td><strong>Type of Methods</strong></td>
+<td>Only method signature <br/> e.g <code>String getFullName(String firstName, String lastName);</code></td>
+<td>Can contains <code>abstract</code>, <code>virtual</code> and implements own methods. <br/> e.g <code>abstract String getFullName(String firstName, String lastName);</code> <br/> <code>public virtual String getFullName(String firstName, String lastName);</code></td>
+<td>Can contains only <code>virual</code> and implements onw methods <br/> e.g <code>public virtual String getFullName(String firstName, String lastName);</code></td>
+</tr>
+<tr>
+<td><strong>Implement Parent Mehthods</strong></td>
+<td>✅ All interface's methods needs to be implemented</td>
+<td>✅ Only methods signed as <code>abstract</code></td>
+<td>❌ Cannot force child class to implements parent methods</td>
+</tr>
+<tr>
+<td><strong>Override Parent Methods</strong></td>
+<td>❌ Interface doesn't contain logic to override</td>
+<td>✅ Only methods signed as <code>virtual</code></td>
+<td>✅ Only methods signed as <code>virtual</code></td>
+</tr>
+<tr>
+<td><strong>Has basic logic?</strong></td>
+<td>❌ Interface contains only method signature</td>
+<td>✅ Methods signed as <code>virual</code> and inner methods can contains basic logic</td>
+<td>✅ Methods signed as <code>virual</code> and inner methods can contains basic logic</td>
+</tr>
+<tr>
+<td><strong>Can be initialized directly?</strong></td>
+<td>❌ <s>new MyInterface();</s></td>
+<td>❌ <s>new MyAbstractClass();</s></td>
+<td>✅ new MyVirtualClass();</td>
+</tr>
+<tr>
+<td><strong>Pros</strong></td>
+<td>✅ New layer of abstraction. <br/> ✅ Interface can be treated as a new data type. <br/> ✅ Logic behind interface can be change without changes in related classes. <br/> ✅ We program to interfaces, not implementations. Code doesn't have reference to specific classes. <br/> ✅ Child class is forced to implement interface's method (Guarantee specific logic). <br/> ✅ Child class can implement many interfaces.</td>
+<td>✅ Abstract class can store common logic (avoid redundancy)<br/> ✅ Child class can be forced to implement some (signed as <code>abstract</code>) methods. <br/> ✅ Child class can override some (singed as <code>virtual</code>) methods. <br/> ✅ Basic logic can be provided by abstract class inner methods. (<code>private</code>, <code>protected</code>, <code>public</code>) <br/> ✅ Easy to update common code for all child method. Just update code in abstract class.</td>
+<td>✅ virtual class can be treated as a base class with base logic, which shoul be accessed by all child classes. <br/> ✅ Virutal class can be initialized direct <br/> ✅ Child class can override some (signed as <code>virtual</code> methods) <br/> ✅ Easy to update common code for all child method. Just update code in virtual class. <br/> Basic logic can be provided by abstract class inner methods. (<code>private</code>, <code>protected</code>, <code>public</code>)</td>
+</tr>
+<tr>
+<td><strong>Cons</strong></td>
+<td>❌ Hard to add or change interface's methods, because all classes that implements interface needs to be change as well. <br/> ❌ Apex class needs to implement all interface methods even if it's not relevant.</td>
+<td>❌ Cannot be initialized directly. <br/> ❌ Apex class needs to implement all <code>abstract</code> methods even if it's not relevant. <br/> ❌ Child class can be only extended by one parent class.</td>
+<td>❌ Cannot force child class to implement parent method (<code>abstract</code> cannot be used) <br/> ❌ Child class can be only extended by one parent class.</td>
+</tr>
+<tr>
+<td><strong>Goal</strong></td>
+<td>To create new layer of abstraction</td>
+<td>To provide kind of &quot;partial&quot; class with common logic</td>
+<td>To provide kind of &quot;full&quot; class with base logic</td>
+</tr>
+</tbody>
+</table>
+
+-   Both `virtual` and `abtract` classes allow you to extend the class (i.e. create child classes that inherit non-private methods and variables)
+-   A `virtual` class can be instantiated directly, whereas an `abstract` class cannot
+-   Both `virtual` and `abstract` classes can contain `virtual` methods (`virtual` methods can have a default implementation that is inherited by child classes, whereas `abstract` methods can only be signatures, and *must* be implemented in child classes)
+-   Only `abstract` classes may contain `abstract` methods
 
 # [SOLID Principles](https://www.youtube.com/watch?v=yxf2spbpTSw)
   ## The Single Responsibility Principle
