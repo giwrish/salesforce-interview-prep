@@ -1,48 +1,11 @@
 # Salesforce Developer Interview Preparation Guide
-## Topics for Technical Discussion
 
-1. Objects, Fields and Rows
-1. Data Modelling & Object Relationships
-1. Salesforce Data Security Model
-1. Front-end (LWC, Aura, Visualforce)
-1. Apex
-1. Database (SOQL, DML, Indexing)
-1. Integration
-1. Platform Events
-1. Platform Cache
-1. Governor limits
-
-1. Technical Section
-    1. Data Modelling
-    1. Security Model
-    1. Automation tools
-    1. Apex
-        1. Triggers
-        1. Programming Concepts
-        1. Keywords (Frequently Used)
-        1. Interfaces (Frequently Used)
-        1. Asynchronous Apex
-        1. Class Reference (Frequently Used)
-        1. Annotations
-    1. SOQL & SOSL
-    1. Lightning Web Components
-    1. Lightning Aura Components
-    1. Visualforce
-    1. Integration
-    1. Misc
-    1. FA Technical Qs
 1. Behavioural Section
     1. How to answer behavioral questions
     1. Tell me about yourself
     1. Why Do You Want to Work Here?
     1. Question to ask interviewer after the interview
     1. FA Behavioural Qs
-1. Interview Experiences
-    1. PayPal
-    1. Zoom
-    1. Expedia
-    1. Workday
-# Technical Section
 
 ### FA Technical Qs
 
@@ -76,6 +39,3 @@
 28. How do you handle NullPointerException in apex?
 
 https://www.sfdc99.com/2014/12/18/common-interview-questions-for-salesforce-developers/
-
----
-
