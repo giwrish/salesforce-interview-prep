@@ -16,7 +16,8 @@ Inheritance can be achieved by extending virtual class in apex.
 ## Polymorphism
 - Polymorphism is a concept by which we can perform a single action in different ways.
 - There are two types of polymorphism : compile-time polymorphism and runtime polymorphism. We can perform polymorphism by method overloading and method overriding.
-- If you overload a static method, it is the example of compile time polymorphism.
+- Method overloading - compile time polymorphism.
+- Method overriding - run time polymorphism.
 
 - Why Method Overloading is not possible by changing the return type of method only?
 ```
