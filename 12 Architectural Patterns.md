@@ -132,6 +132,8 @@ Encapsulation is defined as the wrapping up of data under a single unit. It is t
 -   A `virtual` class can be instantiated directly, whereas an `abstract` class cannot
 -   Both `virtual` and `abstract` classes can contain `virtual` methods (`virtual` methods can have a default implementation that is inherited by child classes, whereas `abstract` methods can only be signatures, and *must* be implemented in child classes)
 -   Only `abstract` classes may contain `abstract` methods
+-   Methods defined inside interfaces do not have access modifiers. They are always global.
+-   Interface defines what an object can do whereas Astract class deines what an object is.
 
 # [SOLID Principles](https://www.youtube.com/watch?v=yxf2spbpTSw)
 ## The Single Responsibility Principle
