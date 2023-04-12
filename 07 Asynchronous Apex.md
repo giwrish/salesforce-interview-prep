@@ -43,6 +43,7 @@ If we try to do so, then we get AsyncException.
 1.  Scheduled Apex
 
     - What is a cron expression?
+Cron is a system that helps Linux users to schedule any task. However, a cron job is any defined task to run in a given time period. It can be a shell script or a simple bash command. Cron job helps us automate our routine tasks, it can be hourly, daily, monthly, etc.
     - What is the maximum number of Apex classes scheduled concurrently? 100
 
 
