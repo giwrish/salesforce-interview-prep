@@ -26,6 +26,11 @@ If we try to do so, then we get AsyncException.
    - What are the governor limits for a batch apex?
    - How to use AggregateResult in batch?
    - When to use Interable interface in batch apex?
+   - Iterable and querylocator are both used for apex batches.
+QueryLocator can be used when your data that needs to be executed in batch can be fetched using query. And it has limit of 5million reccords.
+Wherein When records can not be filtered by SOQL and scope is based on some cusotm business logic, then we go for iterable. And it has limit of 50K records
+
+
 
 1.  Future Apex
 
