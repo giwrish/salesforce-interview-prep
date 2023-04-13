@@ -16,6 +16,7 @@
 - [View All, Modify All, View All Data, Modify All Data](https://help.salesforce.com/articleView?id=sf.users_profiles_view_all_mod_all.htm&type=5)
 - **View/Modify All** - The “View All” and “Modify All” permissions ignore sharing rules and settings, allowing administrators to grant access to records associated with a given object across the organization.
 - **View/Modify All Data** - Managing all data in an organization; for example, data cleansing, deduplication, mass deletion, mass transferring, and managing record approvals.
+- **View All** for a given object doesn't automatically give access to its detail objects. In this scenario, users must have Read access granted via sharing to see any associated child records to the parent record.
 
 ## Difference b/w Profile and Permission Set
 
