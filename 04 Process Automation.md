@@ -32,3 +32,5 @@ With this option, the rule can run multiple times per record, but it won’t run
 - https://www.theblueflamelabs.com/record-triggered-flow-vs-apex-trigger/
 - https://www.linkedin.com/pulse/record-trigger-flow-vs-apex-yusuf-aydemir/
 ### Approval Process
+**Flow Vs Worflow vs Process Builder**
+- https://www.sfdcpoint.com/salesforce/difference-between-workflow-process-builder-and-flow/#:~:text=Flow%20is%20more%20powerful%20than,delete%20records%20for%20multiple%20objects.
