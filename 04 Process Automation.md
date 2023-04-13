@@ -29,5 +29,6 @@ With this option, the rule can run multiple times per record, but it won’t run
 
 ### Flows
 **Flow vs Trigger**
-
+- https://www.theblueflamelabs.com/record-triggered-flow-vs-apex-trigger/
+- https://www.linkedin.com/pulse/record-trigger-flow-vs-apex-yusuf-aydemir/
 ### Approval Process
