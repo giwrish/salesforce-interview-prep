@@ -28,6 +28,6 @@ With this option, the rule can run multiple times per record, but it won’t run
 - Limitations
 
 ### Flows
-
+**Flow vs Trigger**
 
 ### Approval Process
