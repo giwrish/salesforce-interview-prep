@@ -115,7 +115,7 @@ The folder and its files must have the same name, including capitalization and u
    - Give example of Knowledge details component on case record page. How we eliminated the need of apex. If interviewer asks why did not you use base LDS component then tell that Knowledge object was not supported by LDS base component.
 
 ### [Lightning Locker Service](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.security_locker_service)
-
+### [Lightning Out](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.lightning_out)
 
 ## Advance Concepts
 1. [Lightning Web Securty](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.security_lwsec_architecture)
