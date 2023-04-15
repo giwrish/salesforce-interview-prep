@@ -45,3 +45,4 @@ The simple reason is there could be some calculations/updates happening on the s
 
 ### Custom Platform Events
 ### Data Capture Change Events
+### Trigger Best Prac : https://developer.salesforce.com/forums/?id=906F0000000DBl8IAG
