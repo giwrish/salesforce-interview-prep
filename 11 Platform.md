@@ -12,3 +12,10 @@
 Platform Event vs Change Data Capture
 
 1. Change Data Capture is fired automatically when any record in the system is created, updated, deleted and undeleted where as PE is manually fired by user
+
+change data capture vs pushtopic
+
+push topic is an object in salesforce vs cdc is not
+push is bound to a query vs cdc is fired when changes occur in record
+push topic is subscribed using emp api for ui and commetd protocol for backed vs cdc can be subscrived using triggers in apex, empi in ui and grpc for backend
+
