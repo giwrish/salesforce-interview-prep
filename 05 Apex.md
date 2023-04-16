@@ -17,6 +17,9 @@ When inherited sharing is used, it means that it will inherit the sharing settin
 -   If a class with `without sharing` is calling a method of class with `omitted sharing` which in turn calls a method of class with `inherited sharing`, then it will run in `without sharing` mode, as the calling class is in `without sharing` mode and the omitted class is established as `without sharing` context.
 -   If the class is used as the entry point to an Apex transaction, an `omitted sharing` declaration runs as `without sharing`.
 -   If the class is used as the entry point to an Apex transaction, `inherited sharing` ensures that the default is to run as `with sharing`.
+-   <img width="1141" alt="image" src="https://user-images.githubusercontent.com/32008754/232329784-04c42e90-8a5c-4bcd-aabd-e472236ba370.png">
+
+-   If the class is used as the entry point to an Apex transaction, `inherited sharing` ensures that the default is to run as `with sharing`.
 
 ### [Apex Best Practices](https://developer.salesforce.com/blogs/developer-relations/2015/01/apex-best-practices-15-apex-commandments.html) 
 
