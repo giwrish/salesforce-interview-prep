@@ -61,6 +61,8 @@ When inherited sharing is used, it means that it will inherit the sharing settin
     @TestVisible
     @IsTest
     @RemoteAction
+    
+### [Transaction Control IN APEX](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_transaction_control.htm)
 
 ### Class Reference (Frequently Used)
 
