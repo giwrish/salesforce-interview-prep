@@ -184,7 +184,7 @@ The folder and its files must have the same name, including capitalization and u
 ## [JS Desgin Patterns](https://betterprogramming.pub/javascript-design-patterns-25f0faaaa15)
 
 https://github.com/leonardomso/33-js-concepts
-
+Interview Questions JS : https://www.interviewbit.com/javascript-interview-questions/#nan-property
 
 ## Lightning Aura Components
 
