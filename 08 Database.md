@@ -4,7 +4,7 @@
 
     - Query all accounts with all related contacts
     - Query all accounts with count of all related contacts
-    - Query all accounts and its opporutnities that have more than 2 opporunitites
+    - Query all accounts and its opporutnities that have more than 2 opporunitites (SELECT COUNT(ID), ACCOUNTID FROM OPPORTUNITY GROUP BY ACCOUNTID HAVING          COUNT(ID) > 1)
     - Query all accounts with all related opporutnities where opporunity amount is more than 10000
     - Query all accounts with sum of its all opportunity amounts
     - find average amount of all opportunities in the org
