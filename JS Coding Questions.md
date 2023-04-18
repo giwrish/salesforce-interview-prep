@@ -20,7 +20,9 @@ const account = { name : "N26", address : "Berlin", type : "Bank", isInternation
 2. output => "N26 Berlin Bank true"
 
 For input - https://github.com/shindegirish/salesforce-interview-prep/blob/main/userdata.json
+
 3. output => get only id, gender and email of users
+
 4. output => for all records, get only id with location in form of street number, street name, city, state, country adn post code. For example, {  "id": "16b10cac-f376-4a8c-9367-a67d376441ec", location : "5305, Circuito San Luis Potosí, Plan de Ayala (Santa Rosa), Ciudad de Mexico, Mexico, 79818"}
 
 5. check the depth of following object ( output should be 3 since there are 3 nested children)
