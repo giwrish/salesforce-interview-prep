@@ -24,6 +24,7 @@ For input - https://github.com/shindegirish/salesforce-interview-prep/blob/main/
 4. output => for all records, get only id with location in form of street number, street name, city, state, country adn post code. For example, {  "id": "16b10cac-f376-4a8c-9367-a67d376441ec", location : "5305, Circuito San Luis Potosí, Plan de Ayala (Santa Rosa), Ciudad de Mexico, Mexico, 79818"}
 
 5. check the depth of following object ( output should be 3 since there are 3 nested children)
+```
 const test = [{
   id: "1234",
   name: "test 1",
@@ -64,5 +65,5 @@ const test = [{
   }
 }
 ]
-
+```
 6. output => "test 1 test 2 test 3 test 4 rest 1 rest 2 zara 1 zara 2 zara 3"
