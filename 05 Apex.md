@@ -32,7 +32,7 @@ When inherited sharing is used, it means that it will inherit the sharing settin
 5. Queueable - To implement queueable class
 6. Schedulable - To implement schedular class 
 7. HttpCalloutMock - To mock http request
-8. Callable - Enables developers to use a common interface to build loosely coupled integrations between Apex classes or triggers, even for code in separate packages.
+8. Callable - Enables developers to use a common interface to build loosely coupled integrations between Apex classes or triggers, even for code in separate packages. (https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_interface_System_Callable.htm#apex_System_Callable_methods)
 9. Custom Interfaces
 
 - [Unable to lock row - Record currently unavailable errors](https://help.salesforce.com/articleView?id=000338933&type=1&mode=1)
