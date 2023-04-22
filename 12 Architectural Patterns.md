@@ -17,6 +17,7 @@ Inheritance can be achieved by extending abstract and virtual class in apex.
 - Method overloading - compile time polymorphism.
 - Method overriding - run time polymorphism.
 - SOQL TYPEOF - Runtime polymorphism exmple : https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_typeof.htm
+- 
 SELECT Name FROM Account
 WHERE CreatedById IN
     (
