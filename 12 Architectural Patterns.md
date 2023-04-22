@@ -16,7 +16,7 @@ Inheritance can be achieved by extending abstract and virtual class in apex.
 - There are two types of polymorphism : compile-time polymorphism and runtime polymorphism. We can perform polymorphism by method overloading and method overriding.
 - Method overloading - compile time polymorphism.
 - Method overriding - run time polymorphism.
-
+- SOQL TYPEOF - Runtime polymorphism exmple : https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_typeof.htm
 - Why Method Overloading is not possible by changing the return type of method only?
 Because of ambiguity, see below exmaple
 ```
