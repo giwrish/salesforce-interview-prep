@@ -70,7 +70,7 @@ Benefit of using Named credentials is we do not have to explicitly specify remot
 state param in oAuth is used to secure the request. If the state param is sent in the request and same state param is responded back. If the param is tampered with, then the request is considered compromised.
 
 ### [INTEGRATION API 2023 GUIDE](https://magicfuse.co/blog/ultimate-guide-to-salesforce-apis/)
-
+### [Handling Errors in Platform Events](https://www.apexhours.com/exception-handling-using-platform-events/)
 ### [Integration Design Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_intro_overview.htm)
 
 
