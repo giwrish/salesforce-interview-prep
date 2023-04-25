@@ -46,3 +46,5 @@ The simple reason is there could be some calculations/updates happening on the s
 ### Custom Platform Events
 ### Data Capture Change Events
 ### Trigger Best Prac : https://developer.salesforce.com/forums/?id=906F0000000DBl8IAG
+### Recursive Trigger : https://www.apexhours.com/how-to-avoid-recursion-in-trigger/#:~:text=Summary-,What%20is%20a%20recursive%20Trigger%3F,Limit%20due%20to%20Recursive%20Trigger.
+
