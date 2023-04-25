@@ -73,6 +73,7 @@ When inherited sharing is used, it means that it will inherit the sharing settin
 
     - What is the use case of savepoints?
     - What is the use case of SaveResults, UpdateResults, DeleteResults etc.
+    - SaveResults Class : https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_database_saveresult.htm
 
 1.  System Class
 
