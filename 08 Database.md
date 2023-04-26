@@ -7,6 +7,7 @@
     - Query all accounts and its opporutnities that have more than 2 opporunitites (SELECT COUNT(ID), ACCOUNTID FROM OPPORTUNITY GROUP BY ACCOUNTID HAVING          COUNT(ID) > 1)
     - Query all accounts with all related opporutnities where opporunity amount is more than 10000
     - Query all accounts with sum of its all opportunity amounts
+    SELECT Sum(amount), account.name FROM Opportunity group by account.name  
     - find average amount of all opportunities in the org
     - find min amount of all opp in the org
     - find max amount of all opp in the org
