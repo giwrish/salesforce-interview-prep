@@ -24,7 +24,7 @@ If we try to do so, then we get AsyncException.
    - What's the maximum batch size that you can set?
       (2000 in Database.executeBatch() method. If set to more than 2000, the batch size becomes 200 by default.)
    - What are the governor limits for a batch apex?
-   - How to use AggregateResult in batch?
+   - How to use AggregateResult in batch? (https://www.xgeek.net/salesforce/using-aggregate-soql-queries-results-in-batch-apex/) 
    - When to use Interable interface in batch apex?
    - Iterable and querylocator are both used for apex batches.
 QueryLocator can be used when your data that needs to be executed in batch can be fetched using query. And it has limit of 5million reccords.
