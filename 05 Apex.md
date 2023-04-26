@@ -84,3 +84,6 @@ When inherited sharing is used, it means that it will inherit the sharing settin
 1.  Test class
 
     - startTest() - stopTest() - @isTest - seeAllData - Setup Objects
+
+APEX CONTINUATION : https://www.linkedin.com/pulse/apex-continuations-what-when-why-veenesh-vikram-/
+https://pexlify.com/blog/apex-continuation
