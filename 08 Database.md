@@ -11,6 +11,7 @@
     - find min amount of all opp in the org
     - find max amount of all opp in the org
     - Query all opportunities where account country is USA (check actual valuesin system first)
+SELECT count(id),Account.BillingCountry FROM Opportunity group by Account.BillingCountry having count(id) > 2
     - query all opportunities whose accounts have more than 2 opportunities
 
 1. SOQL Optimization
