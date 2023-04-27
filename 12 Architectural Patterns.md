@@ -167,6 +167,7 @@ Segregation means keeping things separated, and the Interface Segregation Princi
 The Dependency Inversion principle states that our classes should depend upon interfaces or abstract classes instead of concrete classes and functions.
 
 https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+Youtube Resource : https://www.youtube.com/watch?v=69sfWNzxTMc
 
 # [Apex Design Patterns](https://salesforcecookcode.wordpress.com/2021/02/26/apex-design-patterns/)
 General design pattern catgeory 
