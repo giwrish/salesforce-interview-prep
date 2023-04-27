@@ -169,6 +169,9 @@ The Dependency Inversion principle states that our classes should depend upon in
 https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
 
 # [Apex Design Patterns](https://salesforcecookcode.wordpress.com/2021/02/26/apex-design-patterns/)
+General design pattern catgeory 
+1. Behavioral design pattern
+2. Structural design pattern
 ## Singleton
 Restricts the instantiation of a class to one “single” instance only within a single transaction context.
 
