@@ -107,3 +107,6 @@ You can use the username-password flow to authorize a client—via a connected a
 
 ![output-onlinepngtools](https://user-images.githubusercontent.com/34469349/157464533-057384b1-1012-4f1a-89e8-67c53a365d6b.png)
 INTERVIEW Q : https://www.sfdcamplified.com/in-depth-scenario-based-interview-questions-on-salesforce-integration/
+
+Username Password OAuth - Flow 
+https://medium.com/@tou_sfdx/salesforce-rest-api-tutorial-3bcd39e493f6
