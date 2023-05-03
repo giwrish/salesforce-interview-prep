@@ -224,16 +224,37 @@ Give example from this link - https://salesforcecookcode.wordpress.com/2021/02/2
 - [Apex Enterprise Patterns — Unit Of Work](https://andyinthecloud.com/2014/07/17/doing-more-work-with-the-unit-of-work/)
 - [Apex Enterprise Patterns — FinancialForce Apex Common Updates](https://andyinthecloud.com/2014/06/28/financialforce-apex-common-updates/)
 
+
+### DESIGN PATTERNS IN CONTEXT OF APEX 
+
 Design patterns are reusable solutions to common software design problems that have been proven to work effectively in various situations. By using design patterns, developers can save time and effort by avoiding reinventing the wheel and instead leveraging existing best practices and solutions.
 
 In the context of Apex development, there are several design patterns that can be used to solve different problems. Here are some examples:
 
-Singleton Pattern: This pattern is used when we need to ensure that only one instance of a class is created and used throughout the application. This can be useful for managing shared resources or configuration data.
+- Singleton Pattern: This pattern is used when we need to ensure that only one instance of a class is created and used throughout the application. This can be useful for managing shared resources or configuration data.
 
-Factory Pattern: This pattern is used when we want to create objects dynamically based on some inputs or conditions. The factory class encapsulates the object creation logic and returns the appropriate object based on the inputs.
+- Factory Pattern: This pattern is used when we want to create objects dynamically based on some inputs or conditions. The factory class encapsulates the object creation logic and returns the appropriate object based on the inputs.
 
-Decorator Pattern: This pattern is used to add new functionality to an existing class without modifying its source code. This is achieved by creating a decorator class that wraps the original class and adds new behavior to it.
+- Decorator Pattern: This pattern is used to add new functionality to an existing class without modifying its source code. This is achieved by creating a decorator class that wraps the original class and adds new behavior to it.
 
-Strategy Pattern: This pattern is used to define a family of algorithms that can be used interchangeably. This allows us to change the algorithm used at runtime without changing the code that uses it.
+- Strategy Pattern: This pattern is used to define a family of algorithms that can be used interchangeably. This allows us to change the algorithm used at runtime without changing the code that uses it.
 
-Observer Pattern: This pattern is used to define a one-to-many relationship between objects, where one object (the subject) notifies a set of other objects (the observers) when its state changes. This can be useful for implementing event-driven architectures.
+- Observer Pattern: This pattern is used to define a one-to-many relationship between objects, where one object (the subject) notifies a set of other objects (the observers) when its state changes. This can be useful for implementing event-driven architectures.
+
+### SOLID PRINCIPLES IN CONTEXT WITH APEX 
+- Single Responsibility Principle (SRP): A class should have only one reason to change. In other words, a class should have only one responsibility. In the context of Apex, this means that a class should be responsible for a single task or functionality. This makes the class easier to understand and maintain.
+
+-  Open/Closed Principle (OCP): A class should be open for extension but closed for modification. In other words, we should be able to add new functionality to a class without changing its existing code. In the context of Apex, this means that we should use interfaces and abstract classes to define the behavior of a class and then implement those interfaces or extend those abstract classes to add new functionality.
+
+- Liskov Substitution Principle (LSP): Subtypes should be substitutable for their base types. In other words, if a class inherits from a base class, it should be able to be used in place of the base class without any issues. In the context of Apex, this means that we should follow the Salesforce.com's Apex inheritance rules and make sure that the derived class behaves like the base class.
+
+ - Interface Segregation Principle (ISP): A client should not be forced to depend on methods it does not use. In other words, we should avoid creating interfaces that have too many methods that are not used by all implementing classes. In the context of Apex, this means that we should create interfaces that are focused on a specific functionality and are used only by the classes that need them.
+
+- Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions. In other words, we should use abstractions (such as interfaces and abstract classes) to define the behavior of a class and then inject the implementation of those abstractions into the class. In the context of Apex, this means that we should use dependency injection (DI) to decouple the dependencies between classes and make them easier to test.
+
+By following these principles, we can write Apex code that is easy to understand, maintain, and extend over time.
+
+
+
+
+
