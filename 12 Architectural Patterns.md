@@ -223,3 +223,17 @@ Give example from this link - https://salesforcecookcode.wordpress.com/2021/02/2
 - [Apex Enterprise Patterns — Unit Of Work](https://andyinthecloud.com/2013/06/09/managing-your-dml-and-transactions-with-a-unit-of-work/)
 - [Apex Enterprise Patterns — Unit Of Work](https://andyinthecloud.com/2014/07/17/doing-more-work-with-the-unit-of-work/)
 - [Apex Enterprise Patterns — FinancialForce Apex Common Updates](https://andyinthecloud.com/2014/06/28/financialforce-apex-common-updates/)
+
+Design patterns are reusable solutions to common software design problems that have been proven to work effectively in various situations. By using design patterns, developers can save time and effort by avoiding reinventing the wheel and instead leveraging existing best practices and solutions.
+
+In the context of Apex development, there are several design patterns that can be used to solve different problems. Here are some examples:
+
+Singleton Pattern: This pattern is used when we need to ensure that only one instance of a class is created and used throughout the application. This can be useful for managing shared resources or configuration data.
+
+Factory Pattern: This pattern is used when we want to create objects dynamically based on some inputs or conditions. The factory class encapsulates the object creation logic and returns the appropriate object based on the inputs.
+
+Decorator Pattern: This pattern is used to add new functionality to an existing class without modifying its source code. This is achieved by creating a decorator class that wraps the original class and adds new behavior to it.
+
+Strategy Pattern: This pattern is used to define a family of algorithms that can be used interchangeably. This allows us to change the algorithm used at runtime without changing the code that uses it.
+
+Observer Pattern: This pattern is used to define a one-to-many relationship between objects, where one object (the subject) notifies a set of other objects (the observers) when its state changes. This can be useful for implementing event-driven architectures.
