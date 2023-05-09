@@ -87,3 +87,5 @@ When inherited sharing is used, it means that it will inherit the sharing settin
 
 APEX CONTINUATION : https://www.linkedin.com/pulse/apex-continuations-what-when-why-veenesh-vikram-/
 https://pexlify.com/blog/apex-continuation
+
+The isNull operator checks a string and returns a boolean value: true if the string is null, or false if the string is not null. The isEmpty operator checks if a string contains no characters and is only whitespace. The isBlank operator checks if a string contains no characters, is only whitespace, and is null
