@@ -127,7 +127,7 @@ The folder and its files must have the same name, including capitalization and u
    The term is only used in the context of web components to distinguish it from the Shadow DOM. I suppose the normal DOM was redefined as Light in contrast with    Shadow. 
    
 ### [Lightning Web Components Performance Best Practices](https://developer.salesforce.com/blogs/2020/06/lightning-web-components-performance-best-practices)
-
+### [Error handling LWC](https://developer.salesforce.com/blogs/2020/08/error-handling-best-practices-for-lightning-web-components)
 ## Questions
 1. [Explain the component structure of LWC component](#component-structure)
 2. [What is LDS and what are the its advantages?](#advantages-of-lds)
