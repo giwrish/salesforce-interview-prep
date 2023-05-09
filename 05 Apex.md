@@ -89,3 +89,6 @@ APEX CONTINUATION : https://www.linkedin.com/pulse/apex-continuations-what-when-
 https://pexlify.com/blog/apex-continuation
 
 The isNull operator checks a string and returns a boolean value: true if the string is null, or false if the string is not null. The isEmpty operator checks if a string contains no characters and is only whitespace. The isBlank operator checks if a string contains no characters, is only whitespace, and is null
+
+### APEX JSON 
+https://sfdclesson.com/2023/01/24/exploring-the-different-methods-of-parsing-json-in-apex/#:~:text=serialize()%20method%20The%20JSON,string%20representation%20of%20that%20object.
