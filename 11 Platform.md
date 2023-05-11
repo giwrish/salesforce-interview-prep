@@ -19,3 +19,10 @@ push topic is an object in salesforce vs cdc is not
 push is bound to a query vs cdc is fired when changes occur in record
 push topic is subscribed using emp api for ui and commetd protocol for backed vs cdc can be subscrived using triggers in apex, empi in ui and grpc for backend
 
+ReplayId for re-subscritpion
+ReplayId is the unique Id given to an event in the event bus 
+Example : 
+Set<Integer> set = [89,67,4,3,88,90,100,1];
+We have 8 events here, lets say these are sent accross if 4 of them fail , failing from 3, replayId will help us identify which have failed coz we
+will get replayId until 3 - we can now ask the system to send other events after replayId of 3.
+
