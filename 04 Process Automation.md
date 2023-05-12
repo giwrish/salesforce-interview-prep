@@ -36,9 +36,16 @@ With this option, the rule can run multiple times per record, but it won’t run
 - https://www.sfdcpoint.com/salesforce/difference-between-workflow-process-builder-and-flow/#:~:text=Flow%20is%20more%20powerful%20than,delete%20records%20for%20multiple%20objects.
 
 
+### When to choose Flows over Apex
+- Always choose when the functionality is straightforward and won't need any scalability. For example - Field updates (because 'before save record triggered flows' are executed before the before triggers in order of execution)
+- Can be managed by admins
+- can define orders in flows
+- are bulkified by nature
+
 ### When to choose Apex over Flows
 
 - Flows are difficult to debug compared to apex. The in-built debug feature is not very user friendly.
 - Cannot add custom error message in case of validations like triggers for record trigged flows.
 - Flows do not support Maps so doing operations on large data set is not very efficient.
 - Doing complex and mathematical logic calculation in flows is comparatively difficult and hard to maintain.
+- Making callouts in the backgorund without user insteraction
