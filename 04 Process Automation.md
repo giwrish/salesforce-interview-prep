@@ -34,3 +34,11 @@ With this option, the rule can run multiple times per record, but it won’t run
 ### Approval Process
 **Flow Vs Worflow vs Process Builder**
 - https://www.sfdcpoint.com/salesforce/difference-between-workflow-process-builder-and-flow/#:~:text=Flow%20is%20more%20powerful%20than,delete%20records%20for%20multiple%20objects.
+
+
+### When to choose Apex over Flows
+
+- Flows are difficult to debug compared to apex. The in-built debug feature is not very user friendly.
+- Cannot add custom error message in case of validations like triggers for record trigged flows.
+- Flows do not support Maps so doing operations on large data set is not very efficient.
+- Doing complex and mathematical logic calculation in flows is comparatively difficult and hard to maintain.
