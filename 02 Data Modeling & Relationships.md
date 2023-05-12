@@ -36,4 +36,8 @@ To convert lookup to the master-detail relationship you need to give parent reco
     - If we delete record c then only C will be deleted , master record will not be deleted.
     - If child C has two Master record A and B, Where A is primary relation then Child record C will inherit the look and feel of Parent object A.
 3. In a many-to-many relationship, a user can't delete a parent record if there are more than 200 junction object records associated with it and if the junction object has a roll-up summary field that rolls up to the other parent. To delete this object, manually delete junction object records until the count is fewer than 200.
+4. Let us say object A is master and B is child. B has an after delete trigger on it. Will deletion of record of object A will result in invoking the after delete trigger on child? Answer - No
+5. If you delete the parent record, then child will also get deleted. But if you restrore the parent record from recycle bin, will child also be restored? - Answer is it depends (read below)
+    - If the record is a child or detail in a master-detail relationship, and the parent record is deleted after the child, the child record is moved to a hard deleted status. In this scenario, the child record cannot be recovered and will need to be recreated.
+    - If the record is a child or detail in a master-detail relationship and the parent record is deleted, the child record is also soft deleted but cannot be viewed in the recycle bin. In this scenario, recovering the parent record will also recover the child record. You will not be able to recover the child record without recovering the parent.
 
