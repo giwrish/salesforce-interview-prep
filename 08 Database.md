@@ -14,7 +14,9 @@
     - Query all opportunities where account country is USA (check actual valuesin system first)
 SELECT count(id),Account.BillingCountry FROM Opportunity group by Account.BillingCountry having count(id) > 2
     - query all opportunities whose accounts have more than 2 opportunities
-
+    
+INSERTING MULTIPLE SOBJECTS : 
+https://salesforce.stackexchange.com/questions/141897/insert-multiple-sobjects-in-single-dml-call
 1. SOQL Optimization
 
     - [Write Efficient Queries](https://trailhead.salesforce.com/en/content/learn/v/modules/database_basics_dotnet/writing_efficient_queries) - Must Read
