@@ -50,7 +50,10 @@ When inherited sharing is used, it means that it will inherit the sharing settin
 - [Mixed DML Operations in Test Methods](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dml_non_mix_sobjects_test_methods.htm)
 - [sObjects That Cannot Be Used Together in DML Operations](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dml_non_mix_sobjects.htm)
 
-1. Exception Handling - https://developer.salesforce.com/blogs/2017/09/error-handling-best-practices-lightning-apex
+1. Exception Handling - https://developer.salesforce.com/blogs/2017/09/error-handling-best-practices-lightning-apex , 
+2. https://salesforcedrillers.com/learn-salesforce/exception-handling-in-salesforce/
+
+
 Error Logging Framework : https://www.youtube.com/watch?v=w6aOBBc-cz0
 
 ### [Annotations](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_annotation.htm)
