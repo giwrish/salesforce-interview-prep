@@ -118,3 +118,5 @@ Follow the series for more Integration stuff : https://www.youtube.com/watch?v=J
 Integration architect series : https://www.youtube.com/playlist?list=PLPPMyrnDS6hs5yTjVevoeJH0UFkNvmjYA
 
 FLow Integration : https://salesforcetime.com/2023/01/05/using-flow-to-make-an-http-callout-without-code/
+
+BULK API WORKING : https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_code_curl_walkthrough.htm
