@@ -28,3 +28,7 @@ Show the contacts on LWC like amazon products after getting them from external a
 * Query Param - companyName
 
 * Authentication - Api Key (as part of the header) `eebdfcb6-35d4-4be0-a240-11193a523c1e`
+
+
+MORE ASSIGNMENTS : 
+https://docs.google.com/document/d/1SJ-8tSlwm3T5juONNzLyiKpWNMdN4DyrtamYCRkuJaM/edit#heading=h.nucpnaqyoyr5
