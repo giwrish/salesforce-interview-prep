@@ -120,3 +120,24 @@ Integration architect series : https://www.youtube.com/playlist?list=PLPPMyrnDS6
 FLow Integration : https://salesforcetime.com/2023/01/05/using-flow-to-make-an-http-callout-without-code/
 
 BULK API WORKING : https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_code_curl_walkthrough.htm
+
+Best Practices : 
+Use Asynchronous Callouts: Perform callouts asynchronously using Apex's built-in future or Queueable interface. This prevents long-running operations from impacting the user experience and allows for better scalability.
+
+Implement Error Handling: Handle any potential errors or exceptions that may occur during the callout process. Make sure to handle HTTP status codes appropriately and provide meaningful error messages to users or log them for troubleshooting purposes.
+
+Implement Retry and Backoff Mechanisms: In case of transient errors, implement retry and backoff logic to ensure the callout is retried with a delay before attempting again. Exponential backoff is commonly used, gradually increasing the wait time between retries.
+
+Leverage Bulk API and Bulk Patterns: If you need to perform bulk data operations, consider using Salesforce Bulk API for higher throughput. Implement bulk patterns such as batching or bulkifying your requests to optimize performance.
+
+Utilize Connection Pooling: Establishing and tearing down connections for each callout can be expensive. Use connection pooling techniques to reuse connections across multiple callouts, reducing overhead and improving performance.
+
+Implement Callout Timeouts: Set appropriate timeout values for your callouts to prevent them from running indefinitely. Use the setTimeout method to set a timeout value in milliseconds, ensuring your callout doesn't exceed the desired time limit.
+
+Secure Sensitive Data: Ensure you handle sensitive data securely when making callouts. Avoid hard-coding credentials or authentication tokens in your code. Instead, use Salesforce's Named Credentials feature or a custom settings object to store and manage authentication details securely.
+
+Consider Bulkification and Throttling: When integrating with external systems, be mindful of API limits and bulkification considerations. Design your solution to work efficiently within those limits and consider implementing throttling mechanisms to prevent hitting API limits.
+
+Implement Proper Testing: Write unit tests to validate your callout code and ensure appropriate coverage. Utilize mock responses to simulate callouts during testing, allowing you to control the data and responses returned.
+
+Monitor and Log Callout Activity: Implement logging mechanisms to capture callout activity, including request and response details, errors, and performance metrics. This information can be invaluable for troubleshooting and optimizing your integration.
