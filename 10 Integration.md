@@ -68,6 +68,9 @@
     
 Remember that this table provides a general overview of the differences between PUT and PATCH, but the specific implementation and behavior may vary based on the API design and requirements. It's essential to consider the semantics and intended behavior of your API when choosing between PUT and PATCH.
 
+## Query Params and Id Params 
+
+<img width="1166" alt="image" src="https://github.com/shindegirish/salesforce-interview-prep/assets/34469349/cec71494-eb68-4b95-9261-4d8f70dd6c12">
 
     
 ## Named Credentials
