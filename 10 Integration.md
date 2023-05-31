@@ -1,68 +1,74 @@
 # Integration
 
-REST vs SOAP
+## Types
+- Inbound
+- Outbound
 
-<table class="alt">
-<tr><th>No.</th><th>SOAP</th><th>REST</th></tr>
-<tr><td>1)</td><td>SOAP is a <strong>protocol</strong>.</td><td>REST is an <strong>architectural style</strong>.</td></tr>
-<tr><td>2)</td><td>SOAP stands for <strong>Simple Object Access Protocol</strong>.</td><td>REST stands for <strong>REpresentational State Transfer</strong>.</td></tr>
-<tr><td>3)</td><td>SOAP <strong>can't use REST</strong> because it is a protocol.</td><td>REST <strong>can use SOAP</strong> web services because it is a concept and can use any protocol like HTTP, SOAP.</td></tr>
-<tr><td>4)</td><td>SOAP <strong>uses services interfaces to expose the business logic</strong>.</td><td>REST <strong>uses URI to expose business logic</strong>.</td></tr>
-<tr><td>5)</td><td>SOAP <strong>defines standards </strong> to be strictly followed. </td><td>REST does not define too much standards like SOAP.</td></tr>
-<tr><td>6)</td><td>SOAP <strong>requires more bandwidth</strong> and resource than REST.</td><td>REST <strong>requires less bandwidth</strong> and resource than SOAP.</td></tr>
-<tr><td>7)</td><td>SOAP <strong>defines its own security</strong>.</td><td>RESTful web services <strong>inherits security measures</strong> from the underlying transport.</td></tr>
-<tr><td>8)</td><td>SOAP <strong>permits XML</strong> data format only.</td><td>REST <strong>permits different</strong> data format such as Plain text, HTML, XML, JSON etc.</td></tr>
-<tr><td>9)</td><td>SOAP is <strong>less preferred</strong> than REST.</td><td>REST <strong>more preferred</strong> than SOAP.</td></tr>
-</table>
+## Communication Types
+- Synchronous
+- Asynchronous
 
-What are types of Integration?
-    - Inbound
-    - Outbound
+### Ways to make OUTBOUND call from Salesforce
+   - Workflows, Flows, Process Builders
+   - Apex Callout
+   - LWC Callout (fetch API)
+
+### Ways to make INBOUND call to Salesforce
+   - Salesforce REST APIs
+   - Apex REST Web Service
+   - Apex SOAP Web Service
+
+## Authentication for Inbound Calls
+- Basic Auth (Username-Password Authentication):
+    - No Connected App is required for this type of authentication.
+    - Basic authentication is a simple authentication scheme used in HTTP protocol. It allows a client to authenticate itself with a server by including a username and password in the HTTP request headers. The server verifies the provided credentials and grants or denies access to the requested resource based on the authentication result.
+    - When accessing a protected resource, the client includes the Authorization header in the HTTP request.
+    - The value of the Authorization header consists of the word "Basic" followed by a base64-encoded string of the username and password joined by a colon (username:password).
+   
+- OAuth 2.0 Authentication (Industry Standard):
+    - You will need to create a Connected App in Salesforce.
+    - High Level Flow Diagram
+ 
+        ![image](https://github.com/shindegirish/salesforce-interview-prep/assets/34469349/69d8f5f2-cd63-4f6d-887b-80c35af6e719)
     
-Communication types - 
-    - Synchronous
-    - Asynchronous
-
-What type of Integrations you should know?
-
-
-
-1. Workflow outbound messages - outbound
-1. Apex callouts (outbound) and Web Services (inbound)
-1. Salesforce Connect - both inbound and outbound depending on use case
-    Salesforce Connect provides seamless integration of data across system boundaries by letting your users view, search, and modify data that’s stored outside your Salesforce org. For example, perhaps you have data that’s stored on premises in an enterprise resource planning (ERP) system. Instead of copying the data into your org, you can use external objects to access the data in real time via web service callouts.
-    Use Salesforce Connect when:
-    -   You have a large amount of data that you don’t want to copy into your Salesforce org.
-    -   You need small amounts of data at any one time.
-    -   You want real-time access to the latest data.
-
-Authentication and Authorization - 
-1. OAuth flows
-    - Web Server flow
-    - JWT Server to Servier integration
+    ### Type of OAuth Flows for Server-to-Server integration
+    - [Username-Password](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5)
+         - Create user in Salesforce
+         - Share user credentials with api consumer along with client id and client secret
+         - Choose the grant_type=password   
+    - [Client Credentials](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_client_credentials_flow.htm&type=5)
+        - Create API User with API Only profile and select Run As this user in Connected App.
+        - Only share client id and client sercret.
+        - grant_type=client_credentials
+    - JWT Bearer Token
+        - This is very complicated to implement and hard to manage.
     
-REST Methods - 
-1. PUT vs PATCH
-    - Short difference - PUT does an UPSERT with complete payload.
-      Meaning if the request payload is -
-      Request endpoint - /person/1
-      {
-      name : "John Doe",
-      age : 30
-      }
+    
+- [JWT Based Access Token - Beta](https://help.salesforce.com/s/articleView?id=sf.connected_app_enable_jwt.htm&type=5)
+- SAML-based Authentication 
 
-    the PUT operation will check if person with id 1 exists, if yes then it will update the name and age.
-    if notm then it will create new person at id 1.
+    
+## HTTP REST
+### Verbs (Methods)
+| Verb   | Role                 | Body | Send Params In |
+| ------ | -------------------- | ----- | ------------ |
+| GET    | Retrieve resource(s) | No    | URL          |
+| POST   | Add resource(s)      | Yes   | Body         |
+| PUT    | Modify resource(s)   | Yes   | Body         |
+| DELETE | Delete resource(s)   | Mostly No    | URL          |
+   
+| PUT                                                                        | PATCH                                                                                  |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Used to completely replace a resource                                      | Used to apply partial updates to a resource                                            |
+| Replaces the entire representation of a resource                           | Sends only the changes or deltas to be applied                                         |
+| Requires sending the complete representation of the resource               | Allows for more granular updates on specific fields or properties                      |
+| If the resource doesn't exist, it may create a new resource                | If the resource doesn't exist, it typically won't create a new resource                |
+| Idempotent - Multiple identical requests result in the same resource state | Not required to be idempotent - Multiple identical requests may have different effects |
+| Typically used with the entire payload of the updated resource             | Typically used with a subset of changes to update specific parts of the resource       |
+    
+Remember that this table provides a general overview of the differences between PUT and PATCH, but the specific implementation and behavior may vary based on the API design and requirements. It's essential to consider the semantics and intended behavior of your API when choosing between PUT and PATCH.
 
-    However,
-    PATCH modifies existing data with given payload.
-    Meaning, Request endpoint - /person/1
-    payload-
-    {
-    name: "Jane Doe"
-    }
-    The path will only update the name and not whole object.
-    Also, if the resource does not exists, then it will fail.
+
     
 ## Named Credentials
 Benefit of using Named credentials is we do not have to explicitly specify remote site settings and also they can store the password safely. It takes care of the authentication as well.
@@ -73,6 +79,19 @@ state param in oAuth is used to secure the request. If the state param is sent i
 ### [Handling Errors in Platform Events](https://www.apexhours.com/exception-handling-using-platform-events/)
 ### [Integration Design Patterns](https://developer.salesforce.com/docs/atlas.en-us.integration_patterns_and_practices.meta/integration_patterns_and_practices/integ_pat_intro_overview.htm)
 
+
+## REST vs SOAP
+| REST (Representational State Transfer)                                          | SOAP (Simple Object Access Protocol)                              |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Architectural style                                                             | Communication protocol                                            |
+| Uses HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources   | Relies on XML-based messaging format                              |
+| Lightweight and scalable                                                        | More complex and feature-rich                                     |
+| Supports various data formats (JSON, XML, etc.)                                 | Primarily uses XML for data encoding                              |
+| Uses standard HTTP protocols for communication                                  | Can use various protocols (HTTP, SMTP, MQ, etc.)                  |
+| Flexible and easily consumed by different clients                               | Typically consumed by more heavyweight clients                    |
+| Fewer standards and specifications                                              | Comprehensive set of standards (WSDL, WS-Security)                |
+| Suitable for web APIs, browser-to-server communication, and mobile applications | Used in enterprise-level applications requiring advanced features |
+| Simple to implement and understand                                              | Can be more complex to implement and require additional tooling   |
 
 JWT
 
@@ -141,3 +160,15 @@ Consider Bulkification and Throttling: When integrating with external systems, b
 Implement Proper Testing: Write unit tests to validate your callout code and ensure appropriate coverage. Utilize mock responses to simulate callouts during testing, allowing you to control the data and responses returned.
 
 Monitor and Log Callout Activity: Implement logging mechanisms to capture callout activity, including request and response details, errors, and performance metrics. This information can be invaluable for troubleshooting and optimizing your integration.
+
+
+# OUTDATED CONTENT 
+
+1. Workflow outbound messages - outbound
+1. Apex callouts (outbound) and Web Services (inbound)
+1. Salesforce Connect - both inbound and outbound depending on use case
+    Salesforce Connect provides seamless integration of data across system boundaries by letting your users view, search, and modify data that’s stored outside your Salesforce org. For example, perhaps you have data that’s stored on premises in an enterprise resource planning (ERP) system. Instead of copying the data into your org, you can use external objects to access the data in real time via web service callouts.
+    Use Salesforce Connect when:
+    -   You have a large amount of data that you don’t want to copy into your Salesforce org.
+    -   You need small amounts of data at any one time.
+    -   You want real-time access to the latest data.
