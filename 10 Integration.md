@@ -165,6 +165,9 @@ Documentation: Provide clear and concise documentation for your web service, inc
 
 Performance Optimization: Identify potential performance bottlenecks and optimize your code accordingly. Use query and database performance tuning techniques, such as selective filtering and indexing, to enhance the efficiency of your web service.
 ***************************************************************************************************************<img width="677" alt="Screenshot 2023-06-05 at 10 17 28" src="https://github.com/shindegirish/salesforce-interview-prep/assets/32008754/83501395-1c4b-42aa-b845-072f20be175a">
+<img width="621" alt="Screenshot 2023-06-05 at 10 18 43" src="https://github.com/shindegirish/salesforce-interview-prep/assets/32008754/77be345e-a265-471a-a4d4-1ced1aad2470">
+<img width="660" alt="Screenshot 2023-06-05 at 10 19 45" src="https://github.com/shindegirish/salesforce-interview-prep/assets/32008754/ca481b5a-52b6-45ef-9bb2-259d55cde33c">
+
 *************************************
 # OUTDATED CONTENT 
 
