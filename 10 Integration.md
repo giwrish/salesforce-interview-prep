@@ -164,7 +164,8 @@ Unit Testing: Write comprehensive unit tests to validate the functionality of yo
 Documentation: Provide clear and concise documentation for your web service, including the API endpoints, request/response structures, authentication requirements, and any additional guidelines for consuming the service. This helps other developers understand and integrate with your web service effectively.
 
 Performance Optimization: Identify potential performance bottlenecks and optimize your code accordingly. Use query and database performance tuning techniques, such as selective filtering and indexing, to enhance the efficiency of your web service.
-****************************************************************************************************************************************************
+***************************************************************************************************************<img width="677" alt="Screenshot 2023-06-05 at 10 17 28" src="https://github.com/shindegirish/salesforce-interview-prep/assets/32008754/83501395-1c4b-42aa-b845-072f20be175a">
+*************************************
 # OUTDATED CONTENT 
 
 1. Workflow outbound messages - outbound
