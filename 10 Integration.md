@@ -120,7 +120,7 @@ FLow Integration : https://salesforcetime.com/2023/01/05/using-flow-to-make-an-h
 
 BULK API WORKING : https://developer.salesforce.com/docs/atlas.en-us.api_asynch.meta/api_asynch/asynch_api_code_curl_walkthrough.htm
 
-Best Practices : 
+  ***************************************** REST API BEST PRACTICES ******************************************************************************
 Use Asynchronous Callouts: Perform callouts asynchronously using Apex's built-in future or Queueable interface. This prevents long-running operations from impacting the user experience and allows for better scalability.
 
 Implement Error Handling: Handle any potential errors or exceptions that may occur during the callout process. Make sure to handle HTTP status codes appropriately and provide meaningful error messages to users or log them for troubleshooting purposes.
@@ -142,6 +142,29 @@ Implement Proper Testing: Write unit tests to validate your callout code and ens
 Monitor and Log Callout Activity: Implement logging mechanisms to capture callout activity, including request and response details, errors, and performance metrics. This information can be invaluable for troubleshooting and optimizing your integration.
 
 
+*********************************************** WEBSERVICE BEST PRACTICES *************************************************************************
+When it comes to writing an Apex web service in Salesforce, there are several best practices you can follow to ensure efficient and maintainable code. Here are some key recommendations:
+
+Use RESTful architecture: Design your web service using the principles of Representational State Transfer (REST). Utilize HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources and follow RESTful URL patterns.
+
+Authentication and Authorization: Implement proper authentication and authorization mechanisms to secure your web service. You can use Salesforce's built-in authentication mechanisms like OAuth, JWT, or session-based authentication.
+
+Input Validation: Validate all incoming data to ensure it adheres to the expected format and meets any necessary constraints. This helps prevent potential security vulnerabilities, data corruption, and errors in your web service.
+
+Use Bulkification: When dealing with large data sets, utilize Apex's bulkification techniques to optimize performance. Avoid writing queries or DML operations within loops as it can lead to governor limit exceptions.
+
+Error Handling: Implement robust error handling mechanisms to provide meaningful error messages and handle exceptions gracefully. Use appropriate HTTP status codes to indicate the outcome of the request (e.g., 200 for success, 400 for bad request, 500 for internal server error).
+
+Governor Limits: Be mindful of Salesforce's governor limits while designing your web service. Ensure that your code remains within the acceptable limits, such as SOQL queries, DML operations, and CPU time. Monitor and log usage to identify and address any potential issues.
+
+Use Proper Logging: Incorporate logging statements in your code to capture relevant information for debugging and monitoring purposes. Utilize Salesforce's logging capabilities, such as Debug Logs or Platform Events, to track and analyze the behavior of your web service.
+
+Unit Testing: Write comprehensive unit tests to validate the functionality of your web service. Aim for high test coverage to ensure that your code behaves as expected and to catch any regressions during future development cycles.
+
+Documentation: Provide clear and concise documentation for your web service, including the API endpoints, request/response structures, authentication requirements, and any additional guidelines for consuming the service. This helps other developers understand and integrate with your web service effectively.
+
+Performance Optimization: Identify potential performance bottlenecks and optimize your code accordingly. Use query and database performance tuning techniques, such as selective filtering and indexing, to enhance the efficiency of your web service.
+****************************************************************************************************************************************************
 # OUTDATED CONTENT 
 
 1. Workflow outbound messages - outbound
