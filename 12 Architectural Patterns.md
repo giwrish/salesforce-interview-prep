@@ -28,6 +28,12 @@ WHERE CreatedById IN
         END
     FROM CASE
     )
+  SELECT
+    TYPEOF What
+        WHEN Account THEN Id, LastModifiedDate
+        WHEN Opportunity THEN Id
+    END
+FROM Task
 - Why Method Overloading is not possible by changing the return type of method only?
 Because of ambiguity, see below exmaple
 ```
