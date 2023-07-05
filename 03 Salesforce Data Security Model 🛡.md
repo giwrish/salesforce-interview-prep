@@ -85,3 +85,7 @@ Queues are typically used when you want to assign a record to a bunch of users. 
 
 Group on the other hand are used more for a sharing purpose. They are not the owner of the records (like queue) but can share the records (in terms of access)
 https://www.biswajeetsamal.com/blog/salesforce-public-groups-vs-queues/
+
+# New Sharing Rules : 
+[Sharing Rules New](https://meera-r-nair.blogspot.com/2022/05/salesforce-security-restriction-rules.html)
+
