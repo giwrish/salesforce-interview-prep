@@ -1,6 +1,11 @@
 # Apex Triggers
 1. [Context Variables](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_context_variables.htm)
 1. [Context Variable Considerations](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_context_variables_considerations.htm)
+ 
+
+Trigger.new : Returns a list of the new versions of the sObject records. Note that this sObject list is only available in insert and update triggers, and the records can only be modified in before triggers.
+Trigger.old : Returns a list of the old versions of the sObject records. Note that this sObject list is only available in update and delete triggers.
+
 
 ![image](https://user-images.githubusercontent.com/34469349/153751105-a5789a44-1619-4232-baeb-d9189f764f91.png)
 
