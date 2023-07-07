@@ -177,8 +177,32 @@ Youtube Resource : https://www.youtube.com/watch?v=69sfWNzxTMc
 
 # [Apex Design Patterns](https://salesforcecookcode.wordpress.com/2021/02/26/apex-design-patterns/)
 General design pattern catgeory 
-1. Behavioral design pattern
-2. Structural design pattern
+Creational Patterns:
+Creational patterns focus on object creation mechanisms, providing flexibility in creating objects and isolating the process of object instantiation. Examples of creational patterns include:
+
+Singleton Pattern
+Factory Pattern
+Abstract Factory Pattern
+Builder Pattern
+Prototype Pattern
+Structural Patterns:
+Structural patterns deal with object composition and class relationships, helping to create larger structures from individual objects. These patterns emphasize the composition of classes and objects to form more complex structures while keeping them flexible and efficient. Examples of structural patterns include:
+
+Adapter Pattern
+Decorator Pattern
+Composite Pattern
+Proxy Pattern
+Bridge Pattern
+Facade Pattern
+Behavioral Patterns:
+Behavioral patterns focus on communication and interaction between objects, specifying how objects collaborate and distribute responsibilities. These patterns are concerned with the interaction patterns between objects and the delegation of responsibilities. Examples of behavioral patterns include:
+
+Observer Pattern
+Strategy Pattern
+Command Pattern
+Iterator Pattern
+Template Method Pattern
+State Pattern
 ## Singleton
 Restricts the instantiation of a class to one “single” instance only within a single transaction context.
 
