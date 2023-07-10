@@ -215,6 +215,38 @@ State Pattern
 ## Singleton
 Restricts the instantiation of a class to one “single” instance only within a single transaction context.
 
+Suppose you have a Salesforce application that requires global configuration settings, such as API endpoints, authentication credentials, or other application-specific parameters. You want to ensure that these configuration settings are loaded and accessible from anywhere within your application.
+
+
+public class AppConfig {
+    private static AppConfig instance;
+    private String apiUrl;
+    private String apiKey;
+
+    private AppConfig() {
+        // Load configuration settings from a data source, such as Custom Settings or Custom Metadata
+        // ...
+        // For simplicity, we will directly assign dummy values here
+        apiUrl = 'https://api.example.com';
+        apiKey = 'your-api-key';
+    }
+
+    public static AppConfig getInstance() {
+        if (instance == null) {
+            instance = new AppConfig();
+        }
+        return instance;
+    }
+
+    public String getApiUrl() {
+        return apiUrl;
+    }
+
+    public String getApiKey() {
+        return apiKey;
+    }
+}
+
 
 ## Strategy
 lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
