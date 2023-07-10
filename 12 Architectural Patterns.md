@@ -294,6 +294,30 @@ In the context of Apex development, there are several design patterns that can b
 By following these principles, we can write Apex code that is easy to understand, maintain, and extend over time.
 
 
+Constructor : 
 
+In Apex, a constructor is a special method that is used to initialize the state of an object when it is created. Constructors are essential for creating and initializing objects with specific values and configurations. They allow you to set initial values for object properties and perform any necessary setup or validation before the object is used.
+public class Car {
+    public String make { get; private set; }
+    public String model { get; private set; }
+    public Integer year { get; private set; }
+
+    public Car(String make, String model, Integer year) {
+        // Perform validation on input parameters
+        if (make != null && model != null && year != null) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        } else {
+            throw new IllegalArgumentException('Invalid car details');
+        }
+    }
+}
+Car myCar = new Car('Honda', 'Civic', 2021);
+
+
+By using the constructor, you guarantee that every Car object is created with valid initial values. It helps in preventing inconsistent or incorrect states of objects and enforces the necessary validation rules at the time of object creation.
+
+Constructors are also useful for performing other setup tasks, such as establishing database connections, initializing collections, or loading initial data, depending on the specific requirements of your application.
 
 
