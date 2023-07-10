@@ -38,3 +38,6 @@ https://salesforce.stackexchange.com/questions/141897/insert-multiple-sobjects-i
     ##### Very very advance, salesforce implementation level stuff below (nothing to lose even if you don't read)
 
     - [Query and Search Optimization Cheat Sheet (pdf)](http://resources.docs.salesforce.com/194/0/en-us/sfdc/pdf/salesforce_query_search_optimization_developer_cheatsheet.pdf)
+  
+   <img width="746" alt="Screenshot 2023-07-10 at 10 29 01" src="https://github.com/shindegirish/salesforce-interview-prep/assets/32008754/004d0474-b7d7-495e-af24-d1448487f506">
+
