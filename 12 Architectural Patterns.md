@@ -11,6 +11,9 @@ Inheritance represents the IS-A relationship. SavingsAccount IS-A Account. Curre
 
 Inheritance can be achieved by extending abstract and virtual class in apex.
 
+<img width="922" alt="image" src="https://github.com/shindegirish/salesforce-interview-prep/assets/32008754/d04861ff-78a0-44a6-84d1-71d49fee423d">
+
+
 ## Polymorphism
 - Polymorphism is a concept by which we can perform a single action in different ways.
 - There are two types of polymorphism : compile-time polymorphism and runtime polymorphism. We can perform polymorphism by method overloading and method overriding.
