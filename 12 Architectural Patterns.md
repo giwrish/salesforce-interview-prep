@@ -293,6 +293,35 @@ Give example from this link - https://salesforcecookcode.wordpress.com/2021/02/2
 - [Apex Enterprise Patterns — Service Layer](https://andyinthecloud.com/2013/02/11/apex-enterprise-patterns-service-layer/)
 - [Apex Enterprise Patterns — Unit Of Work](https://andyinthecloud.com/2013/06/09/managing-your-dml-and-transactions-with-a-unit-of-work/)
 - [Apex Enterprise Patterns — Unit Of Work](https://andyinthecloud.com/2014/07/17/doing-more-work-with-the-unit-of-work/)
+
+- 
+The Unit of Work pattern is used to manage the state and persistence of multiple records within a transactional boundary. It ensures that all changes to records are treated as a single unit, either all succeed or all fail, maintaining data integrity. This pattern is particularly useful when dealing with complex business processes that involve multiple records and related objects.
+
+Let's consider a valid use-case to understand the Unit of Work pattern in Apex:
+
+Use-case: In a Sales Management application, a sales representative wants to update the details of multiple Opportunity records and related Quote records in a single transaction. The updates should be performed atomically, ensuring that either all the updates succeed, or none of them are saved.
+
+To implement the Unit of Work pattern, you would typically create the following components:
+
+UnitOfWork class: This class acts as a container for managing the records and their changes within a transaction. It provides methods to add records, track changes, and commit the changes.
+
+public class UnitOfWork {
+    private List<SObject> records;
+
+    public UnitOfWork() {
+        records = new List<SObject>();
+    }
+
+    public void addRecord(SObject record) {
+        records.add(record);
+    }
+
+    public void commitChanges() {
+        Database.SaveResult[] results = Database.update(records, false);
+        // Handle the save results and perform necessary error handling or logging
+    }
+}
+
 - [Apex Enterprise Patterns — FinancialForce Apex Common Updates](https://andyinthecloud.com/2014/06/28/financialforce-apex-common-updates/)
 
 
